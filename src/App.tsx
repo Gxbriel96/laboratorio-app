@@ -1,7 +1,9 @@
+import { CostumersForm } from './components/CostumersForm'
 
-
-const App = () =  {
-  return ()
+const App = (): JSX.Element => {
+  return (
+    <CostumersForm/>
+  )
 }
 
 export default App
