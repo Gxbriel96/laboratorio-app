@@ -7,12 +7,14 @@ interface Cliente {
 interface ClienteProps extends Cliente {
 	titleInput: string
 	typeInput: string
+	inputValue: string
 }
 
 export const CostumerInput: React.FC<ClienteProps> = ({
 	name,
 	titleInput,
 	typeInput,
+	inputValue,
 }) => {
 	return (
 		<div className='flex flex-col'>
@@ -24,6 +26,8 @@ export const CostumerInput: React.FC<ClienteProps> = ({
 				type={typeInput}
 				className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
 				placeholder={titleInput}
+				value={inputValue}
+				onChange={(e) => e.target.value}
 			/>
 		</div>
 	)
