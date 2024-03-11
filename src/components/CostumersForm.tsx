@@ -8,21 +8,15 @@ interface Costumer {
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 	e.preventDefault()
-	const dataPaciente: Costumer = {
-		cedula: e.target.cedula.value,
-		nombre: e.target.name.value,
-		apellido: e.target.lastname.value,
-		correo: e.target.email.value,
-	}
+
 	alert('GUARDADO!!!!')
-	console.log(dataPaciente)
 }
 export const CostumersForm: React.FC = () => {
 	return (
 		<div className='flex flex-col border rounded items-center max-w-md mx-auto my-0 bg-gray-50 p-4 sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl'>
 			<div className='bg-gray-100 w-full p-2'>
 				<h1 className='text-2xl font-semibold text-gray-600'>
-					Información del Cliente
+					Datos del Paciente
 				</h1>
 			</div>
 			<form className='w-full' onSubmit={handleSubmit}>
@@ -63,16 +57,16 @@ export const CostumersForm: React.FC = () => {
 				<div className='my-2'>
 					<div className='flex flex-col'>
 						<label
-							htmlFor='address'
+							htmlFor='cedula'
 							className='text-sm font-medium text-gray-700 mb-2'
 						>
-							Dirección
+							Cédula
 						</label>
 						<input
-							id='address'
+							id='cedula'
 							type='text'
 							className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-							placeholder='Dirección'
+							placeholder='Cedula'
 						/>
 					</div>
 				</div>
@@ -96,65 +90,33 @@ export const CostumersForm: React.FC = () => {
 					<div className='my-2'>
 						<div className='flex flex-col'>
 							<label
-								htmlFor='cedula'
+								htmlFor='edad'
 								className='text-sm font-medium text-gray-700 mb-2'
 							>
-								Cédula
+								Edad
 							</label>
 							<input
-								id='cedula'
-								type='text'
+								id='edad'
+								type='number'
+								min='0'
 								className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-								placeholder='Cédula'
+								placeholder='Edad'
 							/>
 						</div>
 					</div>
 					<div className='my-2'>
 						<div className='flex flex-col'>
-							<label
-								htmlFor='name'
-								className='text-sm font-medium text-gray-700 mb-2'
+							<select
+								name='Categoria'
+								className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-7'
 							>
-								Nombre
-							</label>
-							<input
-								id='name'
-								type='text'
-								className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-								placeholder='Nombre'
-							/>
-						</div>
-					</div>
-					<div className='my-2'>
-						<div className='flex flex-col'>
-							<label
-								htmlFor='name'
-								className='text-sm font-medium text-gray-700 mb-2'
-							>
-								Nombre
-							</label>
-							<input
-								id='name'
-								type='text'
-								className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-								placeholder='Nombre'
-							/>
-						</div>
-					</div>
-					<div className='my-2'>
-						<div className='flex flex-col'>
-							<label
-								htmlFor='name'
-								className='text-sm font-medium text-gray-700 mb-2'
-							>
-								Nombre
-							</label>
-							<input
-								id='name'
-								type='text'
-								className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-								placeholder='Nombre'
-							/>
+								<option value='Otros' disabled selected>
+									Seleccione una opción
+								</option>
+								<option value='Masculino'>Masculino</option>
+								<option value='Femenino'>Femenino</option>
+								<option value='OtroGen'>Otros</option>
+							</select>
 						</div>
 					</div>
 				</div>
