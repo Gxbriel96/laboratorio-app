@@ -5,6 +5,7 @@ import { Error404 } from '../components/Error404'
 import { CostumersForm } from '../components/CostumersForm'
 import LoginLab from '../components/LoginLab'
 import Prueba from '../components/Prueba'
+import Home from '../components/Home'
 
 export const Router = createBrowserRouter([
 	{
@@ -13,17 +14,21 @@ export const Router = createBrowserRouter([
 		errorElement: <Error404 />,
 		children: [
 			{
+				index: true,
+				element: <Home />,
+			},
+			{
 				path: '/agregar-paciente',
 				element: <CostumersForm />,
+			},
+			{
+				path: '/prueba-orina',
+				element: <Prueba />,
 			},
 		],
 	},
 	{
 		path: '/login',
 		element: <LoginLab />,
-	},
-	{
-		path: '/prueba-orina',
-		element: <Prueba />,
 	},
 ])

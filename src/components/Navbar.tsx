@@ -15,6 +15,14 @@ const Navbar = (): JSX.Element => {
 					</li>
 					<li>
 						<NavLink
+							to='/agregar-paciente'
+							className='text-gray-300 hover:text-white mx-4'
+						>
+							Agregar paciente
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
 							to='/pacientes'
 							className='text-gray-300 hover:text-white mx-4'
 						>

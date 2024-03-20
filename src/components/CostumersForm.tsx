@@ -15,101 +15,48 @@ export const CostumersForm: React.FC = () => {
 	return (
 		<div className='flex flex-col border rounded items-center max-w-md mx-auto my-0 bg-gray-50 p-4 sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl'>
 			<div className='bg-gray-100 w-full p-2'>
-				<h1 className='text-2xl font-semibold text-gray-600'>
+				<h2 className='text-2xl font-semibold text-gray-600'>
 					Datos del Paciente
-				</h1>
+				</h2>
 			</div>
 			<form className='w-full' onSubmit={handleSubmit}>
 				<div className='grid grid-cols-2 gap-6'>
 					<div className='my-2'>
 						<div className='flex flex-col'>
-							<label
-								htmlFor='name'
-								className='text-sm font-medium text-gray-700 mb-2'
-							>
-								Nombre
-							</label>
-							<input
-								id='name'
-								type='text'
-								className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-								placeholder='Nombre'
-							/>
+							<label htmlFor='name'>Nombre</label>
+							<input id='name' type='text' placeholder='Nombre' />
 						</div>
 					</div>
 					<div className='my-2'>
 						<div className='flex flex-col'>
-							<label
-								htmlFor='lastname'
-								className='text-sm font-medium text-gray-700 mb-2'
-							>
-								Apellido
-							</label>
-							<input
-								id='lastname'
-								type='text'
-								className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-								placeholder='Apellido'
-							/>
+							<label htmlFor='lastname'>Apellido</label>
+							<input id='lastname' type='text' placeholder='Apellido' />
 						</div>
 					</div>
 				</div>
 				<div className='my-2'>
 					<div className='flex flex-col'>
-						<label
-							htmlFor='cedula'
-							className='text-sm font-medium text-gray-700 mb-2'
-						>
-							Cédula
-						</label>
-						<input
-							id='cedula'
-							type='text'
-							className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-							placeholder='Cedula'
-						/>
+						<label htmlFor='cedula'>Cédula</label>
+						<input id='cedula' type='text' placeholder='Cedula' />
 					</div>
 				</div>
 				<div className='my-2'>
 					<div className='flex flex-col'>
-						<label
-							htmlFor='email'
-							className='text-sm font-medium text-gray-700 mb-2'
-						>
-							Correo Electrónico
-						</label>
-						<input
-							id='email'
-							type='text'
-							className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-							placeholder='Correo Electrónico'
-						/>
+						<label htmlFor='email'>Correo Electrónico</label>
+						<input id='email' type='text' placeholder='Correo Electrónico' />
 					</div>
 				</div>
 				<div className='grid grid-cols-2 gap-6'>
 					<div className='my-2'>
 						<div className='flex flex-col'>
-							<label
-								htmlFor='edad'
-								className='text-sm font-medium text-gray-700 mb-2'
-							>
-								Edad
-							</label>
-							<input
-								id='edad'
-								type='number'
-								min='0'
-								className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
-								placeholder='Edad'
-							/>
+							<label htmlFor='edad'>Edad</label>
+							<input id='edad' type='number' min='0' placeholder='Edad' />
 						</div>
 					</div>
 					<div className='my-2'>
 						<div className='flex flex-col'>
-							<select
-								name='Categoria'
-								className='px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-7'
-							>
+							<label htmlFor='categoria'>Género</label>
+							<select name='categoria'>
 								<option value='Otros' disabled selected>
 									Seleccione una opción
 								</option>
